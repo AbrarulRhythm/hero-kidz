@@ -1,5 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 const poppins = Poppins({
   weight: ['100', '200', '400', '500', '600', '700', '800', '900']
@@ -14,7 +16,31 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`} >
-        {children}
+
+        {/* Main Wrapper */}
+        <div className="main-wrapper">
+
+          {/* Header */}
+          <header>
+            <Navbar></Navbar>
+          </header>
+          {/* Header End */}
+
+          {/* ========== Site Main ========== */}
+          <main className="site-main">
+            {children}
+          </main>
+          {/* ========== Site Main End ========== */}
+
+          {/* Footer */}
+          <footer>
+            <Footer></Footer>
+          </footer>
+          {/* Footer End */}
+
+        </div>
+        {/* Main Wrapper End */}
+
       </body>
     </html>
   );
