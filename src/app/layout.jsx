@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           {/* ========== Site Main End ========== */}
 
           {/* Footer */}
-          <footer>
+          <footer className="bg-base-200">
             <Footer></Footer>
           </footer>
           {/* Footer End */}
